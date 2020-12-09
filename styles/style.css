@@ -26,3 +26,6 @@ body {
     }
 }
 
+.hidden {
+    opacity: 0.5;
+}
