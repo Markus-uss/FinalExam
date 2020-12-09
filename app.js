@@ -14,9 +14,22 @@ for (i = 1; i <= 5; i++) {
 
 
 document.getElementById("thumb-bar").addEventListener("mouseenter",function(e){
-    elements.classList.remove("hidden")
+    for (elements of hiddenElements) {
+        elements.classList.remove("hidden");
+    }
 
     currentElement = e.target
     imageDisplay = document.getElementsByClassName("displayed-img")
     imageDisplay[0].src = (currentElement.src)
 }, true)
+
+
+document.getElementsByTagName("button")[0].addEventListener("click",function(){
+    inputField = document.getElementsByTagName("input")
+    if (inputField[0].value == "blur") {
+        imageDisplay[0].src = imageDisplay[0].src.replace(".jpg","B.jpg")
+    } else {
+        alert(inputField[0].value + " is not a valid input.")
+    }
+    inputField[0].value = ''
+})
