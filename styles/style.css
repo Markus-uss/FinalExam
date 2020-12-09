@@ -15,14 +15,21 @@ body {
     label, input, button {
         margin: 0 10px;
     }
+    p {
+        text-align: left;
+    }
 }
 @media screen and (max-width: 640px){
     body {
         width: 80vw;
+        font-size: 4vw;
     }
     label, input, button {
         display: block;
         margin: 0 auto;
+    }
+    .displayed-img {
+        width: 80vw;
     }
 }
 
@@ -32,4 +39,8 @@ body {
 
 li {
     display:inline;
+}
+
+.displayed-img {
+    margin-bottom: 20px;
 }
